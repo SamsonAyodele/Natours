@@ -462,8 +462,25 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 9999; }
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    display: inline-block;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    color: #777;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: all .2s; }
+  .popup__close:hover {
+    color: #55c57a; }
   .popup__content {
     position: absolute;
     top: 50%;
